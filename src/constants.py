@@ -1,0 +1,3 @@
+CROSS = 1
+ZERO = 0
+EMPTY = -1

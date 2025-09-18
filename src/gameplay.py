@@ -34,12 +34,15 @@ class Field:
         pass
 
     def make_move(self, x:int, y:int, mark:int) -> None:
-        # TODO: Do home
-        pass
+        if not x <= 3 and x >= 0: raise ValueError("")
+        if not y <= 3 and y >= 0: raise ValueError("")
+
+        Cell(x,y).set_mark(mark)
+        
 
     def can_move(self, x: int, y: int) -> bool:
-        if not x <= 3: raise ValueError("")
-        if not y <= 3: raise ValueError("")
+        if not x <= 3 and x >= 0: raise ValueError("")
+        if not y <= 3 and y >= 0: raise ValueError("")
 
         if Cell(x,y).is_empty == True:
             return True
@@ -47,5 +50,7 @@ class Field:
             return False
         
     def clear(self) -> None:
-        # TODO: Do home
-        pass
+        counter_j = 0
+        counter_i = 0
+        
+        
